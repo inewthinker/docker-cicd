@@ -28,7 +28,7 @@ pipeline {
                 docker { image 'maven:3.8.1-adoptopenjdk-11' }
             }
             steps {
-                sh 'aws chechk server'  
+                sh 'CHECKING SERVER'  
             }
         }
     }
