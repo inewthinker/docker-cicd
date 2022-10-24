@@ -19,17 +19,16 @@ pipeline {
                 docker { image 'sonar cube' }
             }
             steps {
-                sh 'running test'
+                sh 'TESTING NOW'
             }
         }
         
         stage('integrationTest') {
             agent {
-                docker { image 'amazon/aws-cli' }
+                docker { image 'maven:3.8.1-adoptopenjdk-11' }
             }
             steps {
-                sh 'aws chechk server'
-                sh 'aws deploy {SERVER_IP}'
+                sh 'aws chechk server'  
             }
         }
     }
