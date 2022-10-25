@@ -1,0 +1,11 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('1 step solution with docker-buildkit') {
+            steps {
+                sh 'DOCKER_BUILDKIT=1 docker build --target deploy .'
+            }
+        }
+    }
+}
