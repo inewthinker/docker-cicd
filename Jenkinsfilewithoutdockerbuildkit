@@ -1,0 +1,11 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('step test') {
+            steps {
+                sh 'docker build --target test .'
+            }
+        }
+    }
+}
